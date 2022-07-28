@@ -15,7 +15,10 @@ let fechaHoy = new Date();
 let fechaCuenta = new Date("2022/08/31");
 
 
-//Imprimir días cuenta regresiva
+window.onload = function(){
+    setTimeout(function(){
+      
+        //Imprimir días cuenta regresiva
 let dia = document.querySelector('#dia');
 let restaDias = parseInt((fechaCuenta - fechaHoy) / unDia);
 dia.innerHTML = restaDias;
@@ -41,6 +44,9 @@ minuto.innerHTML = restaMinutos % 60;
 let segundo = document.querySelector('#segundo');
 let restaSegundos = parseInt((fechaCuenta - fechaHoy) / 1000);
 segundo.innerHTML = restaSegundos % 60;
+        
+    }, 1000);
+   };
 
 
 /*
