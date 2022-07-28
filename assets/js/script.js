@@ -1,3 +1,6 @@
+var x = setInterval(function() {
+
+
 //Un día en milisegundos
 let unDia = 1000 * 60 * 60 * 24;
 
@@ -15,8 +18,6 @@ let fechaHoy = new Date();
 let fechaCuenta = new Date("2022/08/31");
 
 
-window.onload = function(){
-    setTimeout(function(){
       
         //Imprimir días cuenta regresiva
 let dia = document.querySelector('#dia');
@@ -40,13 +41,17 @@ let minuto = document.querySelector('#minuto');
 let restaMinutos = parseInt((fechaCuenta - fechaHoy) / unMinuto);
 minuto.innerHTML = restaMinutos % 60;
 
+
 //Imprimir segundos cuenta regresiva
 let segundo = document.querySelector('#segundo');
 let restaSegundos = parseInt((fechaCuenta - fechaHoy) / 1000);
 segundo.innerHTML = restaSegundos % 60;
         
-    }, 1000);
-   };
+if (distance < 0) {
+    clearInterval(x);
+    document.querySelector(".table").innerHTML = "Llegó";
+  }
+}, 1000);
 
 
 /*
