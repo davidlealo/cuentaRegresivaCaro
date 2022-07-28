@@ -26,22 +26,21 @@ let horaRegresiva = new Date("2022/08/31").getHours();
 console.log(typeof (horaRegresiva))
 let horaActual = Number(new Date().getHours());
 console.log(typeof (horaActual))
-let resultadoHora = restaDias * 24;
+let resultadoHora = restaDias % 24;
 
 console.log(`Hora de la cuenta regresiva es ${horaRegresiva} y a resta es ${resultadoHora}`)
 
-let restaHoras = (horaRegresiva - horaActual);
-hora.innerHTML = restaHoras;
+hora.innerHTML = resultadoHora;
 
 //Imprimir minutos cuenta regresiva
 let minuto = document.querySelector('#minuto');
 let restaMinutos = parseInt((fechaCuenta - fechaHoy) / unMinuto);
-minuto.innerHTML = restaMinutos;
+minuto.innerHTML = restaMinutos % 60;
 
 //Imprimir segundos cuenta regresiva
 let segundo = document.querySelector('#segundo');
 let restaSegundos = parseInt((fechaCuenta - fechaHoy) / 1000);
-segundo.innerHTML = restaSegundos;
+segundo.innerHTML = restaSegundos % 60;
 
 
 /*
